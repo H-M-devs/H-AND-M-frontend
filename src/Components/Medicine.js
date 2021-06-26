@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import axios from 'axios';
+import MyDrugs from './MyDrugs';
+import AddButton from './AddButton'
 
 class Medicine extends react.Component {
     constructor(props) {
@@ -12,6 +14,7 @@ class Medicine extends react.Component {
             status: false,
             searchName: '',
             data: [],
+            selected: {},
 
         }
     }
@@ -38,7 +41,7 @@ class Medicine extends react.Component {
 
 
     componentDidMount = async () => {
-        axios.get('https://api.fda.gov/drug/event.json?limit=100').then(response => {
+        axios.get('https://api.fda.gov/drug/event.json?limit=50').then(response => {
             let data = response.data.results.map(value => {
                 return value.patient.drug
             })
@@ -53,6 +56,8 @@ class Medicine extends react.Component {
                 alert(error.message);
             })
     }
+
+   
 
     render() {
         return (
@@ -70,7 +75,9 @@ class Medicine extends react.Component {
 
                 <div className="flex" style={{ display: 'flex', 'justify-content': 'center', gap: '2%', 'flex-wrap': 'wrap' }}>
                     {this.state.status &&
-                        this.state.medicineData.map(value => {
+                        this.state.medicineData.map((value,index)  => {
+                            // console.log(value);
+                            
                             return (<Card style={{ width: '18rem' }}>
                                 <Card.Img variant="top" src="holder.js/100px180" />
                                 <Card.Body>
@@ -79,13 +86,23 @@ class Medicine extends react.Component {
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Add to my drugs</Button>
+                                    <AddButton
+                                    value={value[0]}
+                                    index={index}
+                                    selected={this.props.selected} 
+
+                                    />
+                                    
+                                   
                                 </Card.Body>
                             </Card>)
                         })
+                        
 
 
                     }
+
+              
                 </div>
 
 

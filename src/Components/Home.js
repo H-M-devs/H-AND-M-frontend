@@ -34,7 +34,7 @@ class Home extends react.Component {
 
                 </Form>
 
-                {this.state.filter === "Medicine" ? <Medicine /> : <Doctors />}
+                {this.state.filter === "Medicine" ? <Medicine selected={this.props.selected} /> : <Doctors />}
 
 
 
