@@ -9,6 +9,11 @@ import Login from './Components/Login';
 import IsLoadingAndError from './IsLoadingAndError';
 import Home from './Components/Home';
 import Header from './Components/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MyDrugs from './Components/MyDrugs';
+import Appointment from './Components/Appointment';
+import AboutUs from './Components/AboutUs';
+
 
 class App extends react.Component{
   render(){
@@ -30,7 +35,22 @@ class App extends react.Component{
                 <Login/> 
               }
             </Route>
-            
+
+            <Route exact path="/MyDrugs">
+              
+              <MyDrugs/>
+            </Route>
+            <Route exact path="/Appointment">
+              
+            <Appointment/>
+            </Route>
+           
+
+            <Route exact path="/AboutUs">
+              
+            <AboutUs/>
+              </Route>
+             
            
 
           </Switch>
