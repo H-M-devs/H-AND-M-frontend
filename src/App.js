@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import react from 'react';
+import { withAuth0 } from "@auth0/auth0-react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Login from './Components/Login';
+import IsLoadingAndError from './IsLoadingAndError';
+import Home from './Components/Home';
+import Header from './Components/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends react.Component{
+  render(){
+    const { isAuthenticated } = this.props.auth0;
+
+    return (
+      
+      <>
+      <Router>
+        <IsLoadingAndError>
+        <Header/>
+          <Switch>
+            <Route exact path="/">
+              {isAuthenticated &&
+                <Home/> 
+              }
+
+              {!isAuthenticated &&
+                <Login/> 
+              }
+            </Route>
+            
+           
+
+          </Switch>
+         
+        </IsLoadingAndError>
+      </Router>
+    </>
+    )
+  }
 }
 
-export default App;
+
+export default withAuth0(App);
