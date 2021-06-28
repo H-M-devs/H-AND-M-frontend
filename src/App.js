@@ -17,6 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MyDrugs from './Components/MyDrugs';
 import Appointment from './Components/Appointment';
 import AboutUs from './Components/AboutUs.js';
+import History from './Components/History';
 
 
 class App extends react.Component {
@@ -57,6 +58,10 @@ class App extends react.Component {
                 <Appointment />
               </Route>
 
+              <Route exact path="/History">
+
+<History />
+</Route>
 
               <Route exact path="/AboutUs">
 
