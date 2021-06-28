@@ -1,38 +1,106 @@
-a{
-  color:#fff;
-  margin-right: 10px
-}
-
-a:hover{
-  color:darkgrey;
-}
-
-/* button{
-  background-color:black;
+/* :root {
+	--navheight : 60px;
+	--white :#fff;
+	--black :#000;
 } */
 
+* {
+	margin:0px;
+	padding:0px;
+}
 
-button {
-	box-shadow:inset 0px 0px 14px -3px #f2fadc;
-	background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
-	background-color:#dbe6c4;
-	border-radius:6px;
-	border:1px solid #b2b8ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#757d6f;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ced9bf;
+body {
+	font-family:arial;
+	background-image:url(https://image.freepik.com/free-photo/stethoscope-injection-blue-background-medicine-drug-concept_103324-13.jpg);
+	background-size:cover;
+	 background-repeat: no-repeat;
+  /* background-size: auto; */
 }
-button:hover {
-	background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
-	background-color:#9ba892;
+
+nav {
+	height:var(--navheight);
+	border-top:1px solid rgb(255,255,255,0.2);
+	width:80%;
+	margin:20px auto 0px;
 }
-button:active {
+
+nav h4 {
+	color:var(--white);
+	line-height:var(--navheight);
+	text-transform:uppercase;
+	letter-spacing:2px;
+	float:left;
+	padding:0px 60px;
+}
+
+nav i {
+		font-size:11px;
+	}
+	
+nav ul li ul li i {
+	float:right;
+}	
+	
+nav ul {
+	float:left;
+}
+
+nav ul li {
 	position:relative;
-	top:1px;
+	float:left;
+	list-style-type:none;
 }
+
+nav ul li a {
+	display:block;
+	text-decoration:none;
+	color:var(--white);
+	letter-spacing:2px;
+	border:0px solid red;
+	text-transform:uppercase;
+	font-size:12px;
+	padding:22px 12px;
+}
+
+nav ul li ul {
+	display:none;
+	position:absolute;
+	background-color:var(--white);
+	border-radius:2px;
+}
+
+nav ul li ul li {
+	width:180px;
+	border-radius:0px 0px 2px 2px;
+	box-sizing:border-box;
+	padding:2px;
+}
+
+nav ul li ul li a {
+	padding:15px 12px;
+	color:var(--black);
+}
+
+nav ul li ul li a:hover {
+	background-color:gray;
+	color:var(--white);
+	border-radius:2px;
+}
+
+	
+nav ul li ul li ul{
+	display:none;
+	position:absolute;
+	background-color:var(--white);
+	border-radius:2px;
+	margin-left:180px;
+}
+
+nav ul li:hover>ul {
+	display:block;
+}
+
+nav ul li ul li:hover>ul {
+	display:block;
+}
+

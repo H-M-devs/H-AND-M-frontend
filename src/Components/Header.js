@@ -1,41 +1,31 @@
-import React from 'react';
-import { withAuth0 } from "@auth0/auth0-react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from 'react-bootstrap/Navbar';
-import { Link } from "react-router-dom";
+import React, { Component } from 'react'
 import './header.css';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import LogoutButton from './LogoutButton';
-
-class Header extends React.Component {
+export class Header extends Component {
   render() {
-    const { isAuthenticated } = this.props.auth0;
-    return(
-
-      <Navbar bg="dark" variant="dark">
-    <Container>
-    <Navbar.Brand href="#home">H&M</Navbar.Brand>
-    <Nav className="me-auto">
-     
+    return (
+      <div style={{display: 'flow-root'}}>
       
-      {isAuthenticated &&
-      <>
-       <Link to="/">Home</Link>
-          <Link to="/MyDrugs">My Drugs</Link>
-          <Link to="/Appointment">Appointment</Link>
-          <Link to="/AboutUs">About Us</Link>
-
-
-          <LogoutButton />
-          </>
-          }
-    </Nav>
-    
-    </Container>
-  </Navbar>
+<html>
+	<body>
+		<nav>
+			<h4>H&M</h4>
+			
+			<ul>
+				<li><a href="/">home</a></li>
+				<li><a href="/MyDrugs">My Drugs</a></li>
+				<li><a href="/Appointment">Appointment</a></li>
+				<li><a href="/AboutUs">about us </a>
+			
+				
+				</li>
+			
+			</ul>		
+		</nav>
+	</body>
+</html>
+      </div>
     )
   }
 }
 
-export default withAuth0(Header);
+export default Header
