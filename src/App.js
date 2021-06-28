@@ -10,10 +10,12 @@ import Login from './Components/Login';
 import IsLoadingAndError from './IsLoadingAndError';
 import Home from './Components/Home';
 import Header from './Components/Header';
+import Footer from './Components/Footer';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyDrugs from './Components/MyDrugs';
 import Appointment from './Components/Appointment';
-import AboutUs from './Components/AboutUs';
+import AboutUs from './Components/AboutUs.js';
 
 class App extends react.Component {
   constructor(props) {
@@ -59,6 +61,10 @@ class App extends react.Component {
                 <AboutUs />
               </Route>
 
+              <Route exact path="/Footer">
+
+                <Footer />
+              </Route>
 
 
             </Switch>
