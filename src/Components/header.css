@@ -11,10 +11,10 @@
 
 body {
 	font-family:arial;
-	background-image:url(https://image.freepik.com/free-photo/stethoscope-injection-blue-background-medicine-drug-concept_103324-13.jpg);
+	background-image:url(https://image.freepik.com/free-photo/stethoscope-tablet-medicine-blue-background-space-text_185193-6324.jpg);
 	background-size:cover;
 	 background-repeat: no-repeat;
-  /* background-size: auto; */
+	 background-attachment: fixed;
 }
 
 nav {
@@ -56,7 +56,6 @@ nav ul li a {
 	text-decoration:none;
 	color:var(--white);
 	letter-spacing:2px;
-	border:0px solid red;
 	text-transform:uppercase;
 	font-size:12px;
 	padding:22px 12px;
@@ -88,13 +87,14 @@ nav ul li ul li a:hover {
 }
 
 	
-nav ul li ul li ul{
+/* nav ul li ul li ul{
 	display:none;
 	position:absolute;
 	background-color:var(--white);
 	border-radius:2px;
 	margin-left:180px;
-}
+	color: white;
+} */
 
 nav ul li:hover>ul {
 	display:block;

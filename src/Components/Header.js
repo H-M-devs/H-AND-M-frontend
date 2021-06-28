@@ -8,9 +8,9 @@ export class Header extends Component {
 <html>
 	<body>
 		<nav>
-			<h4>H&M</h4>
+			<h4 style={{color:'rgb(7, 14, 48)'}}>H&M</h4>
 			
-			<ul>
+			<ul style={{color:'rgb(7, 14, 48)'}}>
 				<li><a href="/">home</a></li>
 				<li><a href="/MyDrugs">My Drugs</a></li>
 				<li><a href="/Appointment">Appointment</a></li>

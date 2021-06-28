@@ -61,10 +61,10 @@ class App extends react.Component {
                 <AboutUs />
               </Route>
 
-              <Route exact path="/Footer">
+              
 
                 <Footer />
-              </Route>
+          
 
 
             </Switch>
