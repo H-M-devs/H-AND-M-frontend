@@ -14,7 +14,9 @@ class DoctorModal extends react.Component{
             modalStatus: this.props.modalStatus,
             date:'',
             desc:'',
-            appointData: []
+            appointData: [],
+            errorModal: false
+
         }
     }
 
@@ -34,9 +36,16 @@ class DoctorModal extends react.Component{
         } 
 
         axios.post(`${process.env.REACT_APP_SERVER_URL}/doctor`, reqBody).then(response => {
+          console.log(response);
+          if (response.data === 'busy') {
             this.setState({
-                appointData: response.data.doctor
-            })
+              errorModal: true
+          })
+          }else{
+            this.setState({
+              appointData: response.data.doctor
+          })
+          }
         }).catch(error =>
             alert(error.message)
         )
@@ -49,7 +58,7 @@ class DoctorModal extends react.Component{
     render(){
         return(
 
-
+<div>
             <Modal
             show={this.state.modalStatus}
             size="lg"
@@ -84,6 +93,24 @@ class DoctorModal extends react.Component{
             </Modal.Footer>
           </Modal>
 
+
+
+          <Modal show={this.state.errorModal} >
+        <Modal.Header>
+          <Modal.Title style={{color:'red'}}>Appointment Faild</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Sorry the doctor is unavailable at that date</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={()=>this.setState({errorModal:false})}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+
+
+
+          </div>
         )
     }
 }

@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Medicine from './Medicine';
 import Doctors from './Doctors';
+import { withAuth0 } from "@auth0/auth0-react";
+import axios from 'axios';
 
 class Home extends react.Component {
     constructor(props) {
@@ -11,6 +13,11 @@ class Home extends react.Component {
 
             filter: 'Medicine'
         }
+    }
+
+    componentDidMount=()=>{
+        const body = {email:this.props.auth0.user.email}
+        axios.post(`${process.env.REACT_APP_SERVER_URL}/user`,body)
     }
 
     render() {
@@ -46,4 +53,4 @@ class Home extends react.Component {
 }
 
 
-export default Home;
+export default withAuth0(Home);
