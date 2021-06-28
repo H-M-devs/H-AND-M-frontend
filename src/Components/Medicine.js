@@ -3,8 +3,9 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import axios from 'axios';
-import MyDrugs from './MyDrugs';
-import AddButton from './AddButton'
+import AddButton from './AddButton';
+import { withAuth0 } from "@auth0/auth0-react";
+
 
 class Medicine extends react.Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class Medicine extends react.Component {
             searchName: '',
             data: [],
             selected: {},
+            userData:[],
 
         }
     }
@@ -25,7 +27,7 @@ class Medicine extends react.Component {
         event.preventDefault();
         let current = this.state.data;
         let choosed = current.filter(value => {
-            return (value[0].medicinalproduct === this.state.searchName)
+            return (value.medicineName === this.state.searchName)
         })
         if (choosed.length > 0) {
             this.setState({
@@ -39,12 +41,33 @@ class Medicine extends react.Component {
 
     }
 
+    addDrug=(event,value,ammount)=>{
+        event.preventDefault();
+        const reqBody = {
+            email: this.props.auth0.user.email,
+            medicine:{
+                medicineName:value.medicineName,
+                medicineDescription:value.medicineDescription,
+                status:value.status,
+                medicineImg:value.medicineImg,
+                ammount:ammount,
+            }}
+        axios.post(`${process.env.REACT_APP_SERVER_URL}/drug`,reqBody).then(response=>{
+
+            this.setState({
+                userData: response.data
+            })
+
+        }).catch(
+            error=>{
+                alert(error.message)
+            })
+    }
+
 
     componentDidMount = async () => {
-        axios.get('https://api.fda.gov/drug/event.json?limit=50').then(response => {
-            let data = response.data.results.map(value => {
-                return value.patient.drug
-            })
+        axios.get(`${process.env.REACT_APP_SERVER_URL}/drugs`).then(response => {
+            let data = response.data
             this.setState({
                 medicineData: data,
                 data: data,
@@ -73,24 +96,22 @@ class Medicine extends react.Component {
                     </Button>
                 </Form>
 
-                <div className="flex" style={{ display: 'flex', 'justify-content': 'center', gap: '2%', 'flex-wrap': 'wrap' }}>
+                <div className="flex" style={{ display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' }}>
                     {this.state.status &&
-                        this.state.medicineData.map((value,index)  => {
-                            // console.log(value);
-                            
+                        this.state.medicineData.map((value,index)  => {                            
                             return (<Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src="holder.js/100px180" />
+                                <Card.Img variant="top" src={value.medicineImg} />
                                 <Card.Body>
-                                    <Card.Title>{value[0].medicinalproduct}</Card.Title>
+                                    <Card.Title>{value.medicineName}</Card.Title>
                                     <Card.Text>
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
+                                        availability : {value.status}
                                     </Card.Text>
+                                    {/* <Card.Text>
+                                        description : {value.medicineDescription}
+                                    </Card.Text> */}
                                     <AddButton
-                                    value={value[0]}
-                                    index={index}
-                                    selected={this.props.selected} 
-
+                                    value={value}
+                                    addDrug={this.addDrug}
                                     />
                                     
                                    
@@ -115,4 +136,4 @@ class Medicine extends react.Component {
 }
 
 
-export default Medicine;
+export default withAuth0(Medicine);

@@ -1,28 +1,27 @@
 import react from 'react';
-import RangeSlider from 'react-bootstrap-range-slider';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
-import Image from 'react-bootstrap/Image';
+import Button from 'react-bootstrap/Button';
+// import Image from 'react-bootstrap/Image';
+import RangeSlider from 'react-bootstrap-range-slider';
 
 
-class AddButton extends react.Component{
+
+
+class MedicineUpdateButton extends react.Component{
     constructor(props){
         super(props);
         this.state={
             modalStatus:false,
-            ammount:'',
-            status:false
+            ammount:''
         }
     }
 
     render(){
         return(
-            <div>
+<>
 
-
-            <Button variant="primary"  onClick={()=>{this.setState({modalStatus:true})}}>add</Button>
-
+            <Button variant="primary"  onClick={()=>{this.setState({modalStatus:true})}}>update ammount</Button>
 
             <Modal
             show={this.state.modalStatus}
@@ -32,21 +31,12 @@ class AddButton extends react.Component{
           >
             <Modal.Header closeButton onClick={()=>this.setState({modalStatus:false})}>
               <Modal.Title id="contained-modal-title-vcenter">
-                Medicine
+                update the ammount
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Image src={this.props.value.medicineImg} fluid />
-              <h2>medicine name: {this.props.value.medicineName}</h2>
-              <h4>availability: {this.props.value.status}</h4>
-              <h4>Description:</h4>
-                <p>{this.props.value.medicineDescription}</p>
-
-              <Form onSubmit={(event)=>{this.setState({modalStatus:false});this.props.addDrug(event,this.props.value,this.state.ammount)}}>
- 
- 
-  <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-      <h4>how much do you need</h4>
+              <Form onSubmit={(event)=>{this.setState({modalStatus:false});this.props.updateMedicine(event,this.props.index,this.props.value,this.state.ammount)}}>
+  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
   <RangeSlider
   min='0'
   max='10'
@@ -55,17 +45,17 @@ class AddButton extends react.Component{
       onChange={changeEvent => this.setState({ammount:changeEvent.target.value , status:true})}
     />
   </Form.Group>
-  <Button variant="primary" type="submit">Add to my medicine</Button>
+ 
+  <Button variant="primary" type="submit">Done</Button>
 </Form>
             </Modal.Body>
             <Modal.Footer>
               <Button onClick={()=>this.setState({modalStatus:false})}>Close</Button>
             </Modal.Footer>
           </Modal>
-            </div>
-
+</>
         )
     }
 }
 
-export default AddButton;
+export default MedicineUpdateButton;
