@@ -68,7 +68,7 @@ class AboutUs extends react.Component {
                              <a href="https://github.com/Maram-Ankir?tab=repositories">Follow</a>
                             </div>
                           </div>
-                          <div className="card" style={{"--delay":"-8"}}>
+                          <div className="card" style={{"--delay":"2"}}>
                             <div className="content">
                               <div className="img"><img src="https://avatars.githubusercontent.com/u/81149143?v=4" alt=""/></div>
                                 <div className="details">
