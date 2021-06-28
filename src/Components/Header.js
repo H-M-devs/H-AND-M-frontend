@@ -14,10 +14,9 @@ export class Header extends Component {
 				<li><a href="/">home</a></li>
 				<li><a href="/MyDrugs">My Drugs</a></li>
 				<li><a href="/Appointment">Appointment</a></li>
-				<li><a href="/AboutUs">about us </a>
-			
+				<li><a href="/History">History</a></li>
+				<li><a href="/AboutUs">about us </a></li>
 				
-				</li>
 			
 			</ul>		
 		</nav>
