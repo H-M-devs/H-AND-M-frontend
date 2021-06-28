@@ -19,19 +19,8 @@ class App extends react.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedDrugs: [],
-      selectStatus: false
+   
     }
-  }
-
-
-
-  selected = (select) => {
-    this.setState({
-      selectedDrugs: select,
-      selectStatus: true
-    })
-    // console.log(this.state.selectedDrugs);
   }
   render() {
     const { isAuthenticated } = this.props.auth0;
@@ -45,9 +34,7 @@ class App extends react.Component {
             <Switch>
               <Route exact path="/">
                 {isAuthenticated &&
-                  <Home
-                    selected={this.selected}
-                  />
+                  <Home/>
                 }
 
                 {!isAuthenticated &&
@@ -57,9 +44,7 @@ class App extends react.Component {
 
               <Route exact path="/MyDrugs">
                 
-                  <MyDrugs
-                    selectedDrugs={this.state.selectedDrugs}
-                  />
+                  <MyDrugs/>
                 
 
               </Route>

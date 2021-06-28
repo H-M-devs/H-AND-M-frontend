@@ -1,56 +1,100 @@
+import axios from 'axios';
 import react from 'react';
 import Card from 'react-bootstrap/Card';
+import { withAuth0 } from "@auth0/auth0-react";
+import MedicineDeleteButton from './MedicineDeleteButton';
+import MedicineUpdateButton from './MedicineUpdateButton';
+
 class MyDrugs extends react.Component{
     constructor(props){
         super(props);
         this.state= {
-            selectedDrug : []
+            addedDrugs:[],
+            status:false
         }
     }
     componentDidMount=()=>{
-    //     let temp = this.props.selectedDrugs
-    //     let st = this.state.selectedDrug
-   
-        this.setState({
-            selectedDrug: this.props.selectedDrugs
-        })
-
-    //     if (this.state.selectedDrug.length > 0) {
-    //     this.setState({
-                
-    //         selectedDrug: this.state.selectedDrug.push(temp)
-    //     })
-    // }else{
-    //     this.setState({
-                
-    //         selectedDrug: [temp]
-    //     })
-    // }
-  
+        axios.get(`${process.env.REACT_APP_SERVER_URL}/user?email=${this.props.auth0.user.email}`).then(response=>{
+            this.setState({
+                addedDrugs:response.data.medicine,
+                status:true
+            })
+        }).catch(
+            error=>{
+                alert(error.message)
+            })
     }
+
+    deleteMedicine=(index)=>{
+        axios.delete(`${process.env.REACT_APP_SERVER_URL}/drug/${index}?email=${this.props.auth0.user.email}`).then(response=>{
+            this.setState({
+                addedDrugs:response.data.medicine,
+            })
+        }).catch(
+            error=>{
+                alert(error.message)
+            })
+    }
+
+    updateMedicine=(event,index,value,ammount)=>{
+        event.preventDefault();
+     
+            const reqBody = {
+                email: this.props.auth0.user.email,
+                medicine:{
+                    medicineName:value.medicineName,
+                    medicineDescription:value.medicineDescription,
+                    status:value.status,
+                    medicineImg:value.medicineImg,
+                    ammount:ammount,
+                }}
+        axios.put(`${process.env.REACT_APP_SERVER_URL}/drug/${index}`, reqBody).then(response=>{
+            this.setState({
+                addedDrugs:response.data.medicine
+            })
+        }).catch(
+            error=>{
+                alert(error.message)
+            })
+    }
+
+    
     
   
-    render(){
-        console.log(this.state.selectedDrug);
-        // console.log(this.props.selectedDrugs);
+    render() {
         return(
-           
-            this.state.selectedDrug.map((value,index)  => {
-                // console.log(value);
-                
+
+            <div style={{display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' }}>
+           {this.state.status &&
+            this.state.addedDrugs.map((value,index)  => {                
                 return (<Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
-                    <Card.Body>
-                        <Card.Title>{value.medicinalproduct}</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
-                        
-                       
-                    </Card.Body>
-                </Card>)
-            })
+                <Card.Img variant="top" src={value.medicineImg} />
+                <Card.Body>
+                    <Card.Title>{value.medicineName}</Card.Title>
+                    <Card.Text>
+                        availability : {value.status}
+                    </Card.Text>
+                    <Card.Text>
+                        description : {value.medicineDescription}
+                    </Card.Text>
+                    <Card.Text>
+                        ammount : {value.ammount}
+                    </Card.Text>
+                    <MedicineDeleteButton
+                    deleteMedicine={this.deleteMedicine}
+                    index={index}
+                    />
+                    <MedicineUpdateButton
+                    updateMedicine={this.updateMedicine}
+                    index = {index}
+                    value= {value}
+                    />
+
+                   
+                </Card.Body>
+            </Card>)
+            })}
+            </div>
 
 
 
@@ -61,4 +105,4 @@ class MyDrugs extends react.Component{
     }
 }
 
-export default MyDrugs;
+export default withAuth0(MyDrugs);
