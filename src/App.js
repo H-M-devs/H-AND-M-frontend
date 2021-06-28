@@ -1,4 +1,5 @@
 import react from 'react';
+import './App.css';
 import { withAuth0 } from "@auth0/auth0-react";
 import {
   BrowserRouter as Router,
@@ -13,7 +14,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MyDrugs from './Components/MyDrugs';
 import Appointment from './Components/Appointment';
 import AboutUs from './Components/AboutUs';
-
 
 class App extends react.Component {
   constructor(props) {
