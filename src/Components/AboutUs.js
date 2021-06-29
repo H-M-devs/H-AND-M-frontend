@@ -1,10 +1,14 @@
 import react from 'react';
+import Header from './Header';
+
 import Footer from './Footer';
 class AboutUs extends react.Component {
 
   render() {
 
     return (
+<>
+      <Header />
 
   <div >
 <div className="Ourteam" >
@@ -44,7 +48,7 @@ class AboutUs extends react.Component {
                         <div className="img"><img src="https://avatars.githubusercontent.com/u/81553931?v=4" alt=""/></div>
                           <div className="details">
                             <span className="name">Laith Hussein</span>
-                            <p>YouTuber  Blogger</p>
+                            <p>Developer</p>
                           </div>
                          <a href="https://github.com/laithfayizhussein">Follow</a>
                         </div>
@@ -87,6 +91,8 @@ class AboutUs extends react.Component {
                         
                  <Footer/>
                      </div>
+
+                     </>
 
         )
     }

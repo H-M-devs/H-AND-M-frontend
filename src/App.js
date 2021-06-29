@@ -9,8 +9,8 @@ import {
 import Login from './Components/Login';
 import IsLoadingAndError from './IsLoadingAndError';
 import Home from './Components/Home';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+// import Header from './Components/Header';
+// import Footer from './Components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyDrugs from './Components/MyDrugs';
@@ -33,7 +33,7 @@ class App extends react.Component {
       <>
         <Router>
           <IsLoadingAndError>
-            <Header />
+            {/* <Header /> */}
             <Switch>
               <Route exact path="/">
                 {isAuthenticated &&
@@ -71,7 +71,7 @@ class App extends react.Component {
 
               
 
-                <Footer />
+                {/* <Footer /> */}
           
 
 

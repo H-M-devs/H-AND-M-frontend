@@ -5,6 +5,8 @@ import Medicine from './Medicine';
 import Doctors from './Doctors';
 import { withAuth0 } from "@auth0/auth0-react";
 import axios from 'axios';
+import Header from './Header';
+
 
 class Home extends react.Component {
     constructor(props) {
@@ -23,6 +25,8 @@ class Home extends react.Component {
     render() {
         return (
             <>
+                        <Header />
+
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
 

@@ -5,6 +5,8 @@ import { withAuth0 } from "@auth0/auth0-react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Reorder from './Reorder';
+import Header from './Header';
+
 
 
 
@@ -52,8 +54,13 @@ class History extends react.Component {
 
     render() {
         return (
+            <>
+            <Header />
 
             <div style={{ display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' }}>
+                            
+
+
                 {this.state.status &&
                     this.state.addedDrugs.map((value, index) => {
                         return (<Card style={{ width: '18rem' }}>
@@ -107,7 +114,7 @@ class History extends react.Component {
 
 
 
-
+</>
         )
     }
 }

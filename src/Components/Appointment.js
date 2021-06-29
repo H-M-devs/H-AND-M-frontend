@@ -6,6 +6,8 @@ import AppointmentDeleteButton from './AppointmentDeleteButton';
 import AppointmentUpdateButton from './AppointmentUpdateButton';
 import Footer from './Footer';
 // import  './Appointment.css';
+import Header from './Header';
+
 
 
 
@@ -67,8 +69,11 @@ class Appointment extends react.Component{
     render(){
         console.log(this.state.userData);
         return(
+            <>
 
-            <div style={{display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' }}>
+            <Header />
+
+            <div style={{display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' , 'min-height': '64vh'}}>
 
             {this.state.userDataStatus &&
             this.state.userData.map((value,index)  => {
@@ -102,8 +107,9 @@ class Appointment extends react.Component{
                 </Card.Body>
             </Card>)
             })}
-            <Footer/>
+         
         </div>
+        </>
         )
     }
 }

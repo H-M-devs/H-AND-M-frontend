@@ -63,7 +63,7 @@ openModal=(value, index)=>{
 
     render(){
         return(
-              <div>   
+              <div style={{'min-height': '64vh'}}>   
           <Form onSubmit={this.searchResault}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Doctor name</Form.Label>

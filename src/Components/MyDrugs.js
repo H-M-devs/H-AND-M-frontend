@@ -6,6 +6,7 @@ import MedicineDeleteButton from './MedicineDeleteButton';
 import MedicineUpdateButton from './MedicineUpdateButton';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Header from './Header';
 
 
 
@@ -103,8 +104,10 @@ class MyDrugs extends react.Component {
 
     render() {
         return (
+            <>
+            <Header />
 
-            <div style={{ display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' }}>
+            <div style={{ display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' , 'min-height': '64vh'}}>
                 {this.state.status &&
                     this.state.addedDrugs.map((value, index) => {
                         return (<Card style={{ width: '18rem' }}>
@@ -162,7 +165,7 @@ class MyDrugs extends react.Component {
 
 
 
-
+</>
 
 
 
