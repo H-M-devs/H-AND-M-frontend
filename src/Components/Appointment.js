@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import AppointmentDeleteButton from './AppointmentDeleteButton';
 import AppointmentUpdateButton from './AppointmentUpdateButton';
 import Footer from './Footer';
+// import  './Appointment.css';
 
 
 

@@ -23,6 +23,14 @@ section {
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
+	/* display: block; */
+	/* position:absolute; */
+	bottom:0;
+	width:100%;
+	left: 0; 
+	
+
+
 	
 }
 
