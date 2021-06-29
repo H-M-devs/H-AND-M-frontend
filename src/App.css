@@ -139,12 +139,18 @@
 .card a{
   text-decoration: none;
   padding: 7px 18px;
-  border-radius: 25px;
-  color: #fff;
-  background:rgba(7, 34, 73, 0.932);
+  /* border-radius: 25px; */
+  /* color: #fff; */
+  /* background:rgba(7, 34, 73, 0.932); */
   /* background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%); */
   transition: all 0.3s ease;
+  height: 30px;
+  width: 100px;
+  background: linear-gradient(-90deg, #39A2DB 50%, #060707 50%);
+  border-radius: 15px;
+
 }
+
 .card a:hover{
   transform: scale(0.94);
   color:white;

@@ -4,26 +4,40 @@ import Card from 'react-bootstrap/Card';
 // import './login.css';
 import LoginButton from './LoginButton'
 // import Header from './Header';
-// import Footer from './Footer';
+import Footer from './Footer';
+import './login.css';
 
 
 
 class Login extends React.Component {
   render() {
     return(
-    <div style={{'height': '100vh', 'backgroundImage':'url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1573883430697-4c3479aae6b9%3Fixid%3DMnwxMjA3fDB8MHxzZWFyY2h8MjF8fHBpbGxzfGVufDB8fDB8fA%253D%253D%26ixlib%3Drb-1.2.1%26w%3D1000%26q%3D80)', 'background-repeat':'no-repeat', 'background-size':'cover', 'backgroundAttachment':'fixed'}}>
-        
+     
+    <div style={{'height': '100vh', 'backgroundImage':'url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwww.datexcorp.com%2Fwp-content%2Fuploads%2Fshutterstock_785207416.png)', 'background-repeat':'no-repeat', 'background-size':'cover', 'backgroundAttachment':'fixed'}}>
+       <div className="header-container">
+        <div className="Header">
+        <h1>Health & Medicine 💉</h1>
+  <p  style={{color:"white"}}>“ In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.used to demonstrate the visual form of a document or a typeface without relying on meaningful content ” </p>
+        </div>
+        </div>
 
-      
-      <Card style={{ width: '18rem' }}>
-        <Card.Body>
-          <Card.Title>Log In</Card.Title>
-          <Card.Text>
-            Click Below to Log In
-          </Card.Text>
-          <LoginButton/>
-        </Card.Body>
-      </Card>
+<div class="login-box">
+	<h3>  Click Below to Log In</h3>
+	<form action="">
+		<div class="user-box">
+		</div>
+	
+		<a href="">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+  
+    <LoginButton/>
+	
+		</a>
+	</form>
+</div>
       {/* <Footer /> */}
       </div>
     )
