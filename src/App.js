@@ -50,34 +50,39 @@ class App extends react.Component {
               <Route exact path="/MyDrugs">
                 
                   <MyDrugs/>
-                
+
 
               </Route>
               <Route exact path="/Appointment">
-
+            
                 <Appointment />
+           
               </Route>
 
               <Route exact path="/History">
-
+             
 <History />
 </Route>
 
+              
               <Route exact path="/AboutUs">
-
                 <AboutUs />
               </Route>
+              
+  
 
-              <Route exact path="/Footer">
 
-                <Footer />
-              </Route>
+         
+
+               
+         
 
 
             </Switch>
 
           </IsLoadingAndError>
         </Router>
+        {/* <Footer /> */}
       </>
     )
   }
