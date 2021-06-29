@@ -117,9 +117,9 @@ nav ul li ul li:hover>ul {
 .botton2{
 	height: 30px;
 	width: 100px;
-	background: linear-gradient(-90deg, #39A2DB 50%, #F4F9F9 50%);
+	background: linear-gradient(-90deg, #0A1931 50%, #F4F9F9 50%);
 	border-radius: 15px;
-	margin-left: 37vh;
+	margin-left: 28vh;
 	margin-top: 1.7vh;
   }
   .botton2:hover {

@@ -1,0 +1,154 @@
+/* * {
+	padding: 0;
+	margin: 0;
+} */
+/* 
+html,body {
+	background-color: #6E7889;
+	font-family: tahoma, sans-serif;
+	color: #E6EBEE;
+} */
+
+#card {
+	background-color:#0A1931 ;
+    
+	height: auto;
+	width: 300px;
+	margin: 2vh 2vh;
+	border-radius: 25px;
+	padding-bottom: 1px;
+	box-shadow: 2px 2px 5px #010102;
+}
+
+#doctorsCard {
+	color: white;
+	text-align: center;
+	width: 100%;
+	background-color: #E6EBEE;
+	border-radius: 25px 25px 0 0;
+	color: #0A1931;
+	padding: 30px 0;
+	font-weight: 800;
+	margin: 0;
+} 
+
+.image-crop {
+	display: block;
+	position: relative;
+	background-color: #E6EBEE;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	margin-top: 30px;
+	overflow: hidden;
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px #E7E6E1;
+}
+
+#avatar {
+	display: inline;
+	height: 230px;
+	width: auto;
+	margin-left: -34px;
+}
+
+#bio {
+	display: block;
+	margin: 30px auto;
+	width: 280px;
+	height: auto;
+}
+
+#bio p {
+	color: #E6EBEE;
+	font-weight: lighter;
+	font-size: 15px;
+	text-align: justify;
+    text-align: center;
+}
+
+#stats {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	width: 280px;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	font-weight: 500;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+}
+
+.stat {
+    text-align: center;
+	font-size: 25px;
+	margin: 0;
+}
+
+.label {
+	margin: 0;
+}
+
+#buttons {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	width: 280px;
+    
+}
+
+
+.search > h1,.search > h3{
+color:#0A1931;
+}
+
+.doctorsButton{
+    border-radius: 10px;
+    background-color: #E6EBEE;
+    color:#0A1931
+}
+
+.doctorsButton:hover{
+    color: #E6EBEE;
+}
+/* 
+button {
+	display: block;
+	position: relative;
+	padding: 10px 0;
+	width: 130px;
+	margin: 30px 0;
+	border-radius: 25px;
+	border: none;
+	font-size: 20px;
+	letter-spacing: 0.2px;
+	font-weight: 500;
+	background-color: #4069E2;
+	color: #E6EBEE;
+} */
+/* 
+button:focus {
+	display: none;
+} */
+
+#card:hover {
+	/* transform: scale(1.01); */
+	/* cursor: pointer; */
+	transition: all 0.2s ease-in-out;
+    box-shadow: 10px 10px 20px #010102;
+
+
+}
+
+#msg{
+	background-color: #E6EBEE;
+	color: #393B45;
+}
+

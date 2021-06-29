@@ -27,7 +27,7 @@ class Login extends React.Component {
 		<div class="user-box">
 		</div>
 	
-		<a href="sdas">
+		<a href="">
 			<span></span>
 			<span></span>
 			<span></span>

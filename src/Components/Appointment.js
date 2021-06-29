@@ -1,15 +1,13 @@
 import axios from 'axios';
 import react from 'react';
 import { withAuth0 } from "@auth0/auth0-react";
-import Card from 'react-bootstrap/Card';
+// import Card from 'react-bootstrap/Card';
 import AppointmentDeleteButton from './AppointmentDeleteButton';
 import AppointmentUpdateButton from './AppointmentUpdateButton';
 // import Footer from './Footer';
 // import  './Appointment.css';
 import Header from './Header';
-
-
-
+import './Appointment.css';
 
 
 class Appointment extends react.Component{
@@ -70,44 +68,79 @@ class Appointment extends react.Component{
         console.log(this.state.userData);
         return(
             <>
+            <Header/>
 
-            <Header />
-
-            <div style={{display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' , 'min-height': '64vh'}}>
+            <div style={{display: 'flex', 'justify-content': 'center', 'flex-wrap': 'wrap' , marginTop:'3%' }}>
 
             {this.state.userDataStatus &&
-            this.state.userData.map((value,index)  => {
+
+
+
+
+this.state.userData.map((value,index)  => {
                 return (
-                <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={value.imgurl} height='350em'/>
-                <Card.Body>
-                    <Card.Title>Dr. Name : {value.nameDoctor}</Card.Title>
-                    <Card.Text>
-                    specialty : {value.specialty}
-                    </Card.Text>
-                    <Card.Text>
-                    location : {value.location}
-                    </Card.Text>   
-                    <Card.Text>
-                    date : {value.date}
-                    </Card.Text>   
-                    <Card.Text>
-                    case description : {value.desc}
-                    </Card.Text> 
-                    <AppointmentDeleteButton
-       openModal={this.openModal}
-       deleteAppoitment = {this.deleteAppoitment}
-       index = {index}
-       />
-       <AppointmentUpdateButton
-       updateAppointment={this.updateAppointment}
-       index = {index}
-       value= {value}
-       />
-                </Card.Body>
-            </Card>)
-            })}
+
+
+                    
+   <div class="blog-card"  style={{width: '50%', 'margin-left': '5%'}}>
+   <div class="meta">
+     {/* <ul class="details-app">
+       <li class="author"><a href="#">John Doe</a></li>
+       <li class="date">Aug. 24, 2015</li>
+       <li class="tags">
+         <ul>
+           <li><a href="#">Learn</a></li>
+           <li><a href="#">Code</a></li>
+           <li><a href="#">HTML</a></li>
+           <li><a href="#">CSS</a></li>
+         </ul>
+       </li>
+     </ul> */}
+   </div>
+   <div class="description">
+     <div class="photo"><img  src={value.imgurl} alt='img' style={{width:'300px'}}/></div>
+     <h1 style={{ 'line-height': '1','font-size': '1.7rem','margin-left':'300px'}}>Dr. {value.nameDoctor}</h1>
+     <h2 style={{marginLeft:'300px' ,'font-size': '1rem','font-weight': '300','text-transform': 'uppercase',color: '#a2a2a2','margin-top': '5px'}}>date : {value.date}</h2>
+     <p style={{ marginLeft:'300px' , 'word-wrap': 'break-word'}}>  description : {value.desc}</p>
+     <div class="read-more">
+     <AppointmentDeleteButton
+openModal={this.openModal}
+deleteAppoitment = {this.deleteAppoitment}
+index = {index}
+/>
+<AppointmentUpdateButton
+updateAppointment={this.updateAppointment}
+index = {index}
+value= {value}
+/>
+     </div>
+   </div>
+ </div>
+ 
+    
+ ) })
          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  
+
+
+
+    }
         </div>
         </>
         )
