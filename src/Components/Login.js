@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from 'react-bootstrap/Card';
+// import Card from 'react-bootstrap/Card';
 // import './login.css';
 import LoginButton from './LoginButton'
 // import Header from './Header';
-import Footer from './Footer';
+// import Footer from './Footer';
 import './login.css';
 
 
