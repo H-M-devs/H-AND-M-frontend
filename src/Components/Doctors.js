@@ -63,8 +63,9 @@ openModal=(value, index)=>{
 
     render(){
         return(
+
               <div style={{'min-height': '64vh'}}>   
-          <Form onSubmit={this.searchResault}>
+          {/* <Form onSubmit={this.searchResault}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Doctor name</Form.Label>
               <Form.Control type="text" placeholder="Enter Doctor name" onChange={(e)=>this.setState({userSearch:e.target.value})} />
@@ -73,8 +74,23 @@ openModal=(value, index)=>{
             <Button variant="primary" type="submit">
               search
             </Button>
-          </Form>
+          </Form> */}
 
+
+          
+
+  <Form onSubmit={this.searchResault}>
+<div class="flexbox">
+                        <div class="search">
+                            <h1>Search this site</h1>
+                            <h3>Click on search icon, then type your keyword.</h3>
+                            <div>
+                                <input type="text" placeholder="Search . . ."  onChange={(e)=>this.setState({userSearch:e.target.value})}/>
+                            </div>
+                        </div>
+                    </div>
+
+                    </Form>
 
           <div className='doctors' style={{display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' }}>
 

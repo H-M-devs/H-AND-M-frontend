@@ -111,3 +111,14 @@ nav ul li ul li:hover>ul {
 	display:block;
 }
 
+
+
+
+.botton2{
+	height: 30px;
+	width: 100px;
+	background: linear-gradient(-90deg, #39A2DB 50%, #F4F9F9 50%);
+	border-radius: 15px;
+	margin-left: 37vh;
+	margin-top: 1.7vh;
+  }
