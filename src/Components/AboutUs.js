@@ -1,11 +1,12 @@
 import react from 'react';
-import Footer from './Footer'
+import Footer from './Footer';
 class AboutUs extends react.Component {
 
   render() {
 
     return (
-      <div >
+
+  <div >
 <div className="Ourteam" >
   <h2>Meet Our Team</h2>
   <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
@@ -80,13 +81,12 @@ class AboutUs extends react.Component {
                               
                             </div>
                           </div>
-
+                         
                          
                           </div>
-                          <Footer/>
-                        </div>
-                
-                     
+                        
+                 <Footer/>
+                     </div>
 
         )
     }
