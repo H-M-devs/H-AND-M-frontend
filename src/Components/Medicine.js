@@ -85,15 +85,26 @@ class Medicine extends react.Component {
     render() {
         return (
             <div style={{'min-height': '63vh'}}>
-                <Form onSubmit={this.searchResault}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                {/* <Form onSubmit={this.searchResault}> */}
+                    {/* <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Medicine name</Form.Label>
                         <Form.Control type="text" placeholder="Enter Medicine name" onChange={(e) => this.setState({ searchName: e.target.value })} />
                     </Form.Group>
 
                     <Button variant="primary" type="submit">
                         search
-                    </Button>
+                    </Button> */}
+
+<Form  onSubmit={this.searchResault}>
+<div class="flexbox">
+                        <div class="search">
+                            <h1>Search this site</h1>
+                            <h3>Click on search icon, then type your keyword.</h3>
+                            <div>
+                                <input type="text" placeholder="Search . . ."  onChange={(e)=>this.setState({searchName: e.target.value})}/>
+                            </div>
+                        </div>
+                    </div>
                 </Form>
 
                 <div className="flex" style={{ display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' }}>
