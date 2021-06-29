@@ -1,6 +1,5 @@
 import react from 'react';
 import './App.css';
-
 import { withAuth0 } from "@auth0/auth0-react";
 import {
   BrowserRouter as Router,
@@ -17,7 +16,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MyDrugs from './Components/MyDrugs';
 import Appointment from './Components/Appointment';
 import AboutUs from './Components/AboutUs.js';
-
 
 class App extends react.Component {
   constructor(props) {
@@ -63,10 +61,10 @@ class App extends react.Component {
                 <AboutUs />
               </Route>
 
-              <Route exact path="/Footer">
+              
 
                 <Footer />
-              </Route>
+          
 
 
             </Switch>

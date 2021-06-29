@@ -4,6 +4,8 @@ import { withAuth0 } from "@auth0/auth0-react";
 import Card from 'react-bootstrap/Card';
 import AppointmentDeleteButton from './AppointmentDeleteButton';
 import AppointmentUpdateButton from './AppointmentUpdateButton';
+import Footer from './Footer';
+
 
 
 
@@ -99,6 +101,7 @@ class Appointment extends react.Component{
                 </Card.Body>
             </Card>)
             })}
+            <Footer/>
         </div>
         )
     }
