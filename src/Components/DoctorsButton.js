@@ -10,7 +10,7 @@ class DoctorsButton extends react.Component{
         return(
 
 
-            <Button variant="primary"  onClick={()=>{this.props.openModal(this.props.value,this.props.index)}}>add</Button>
+            <Button variant="primary" className="doctorsButton"  onClick={()=>{this.props.openModal(this.props.value,this.props.index)}}>Appoint</Button>
 
         )
     }

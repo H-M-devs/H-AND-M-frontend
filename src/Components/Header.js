@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './header.css';
 import LogoutButton from './LogoutButton';
 import { withAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 
 export class Header extends Component {
   render() {
@@ -17,12 +18,11 @@ export class Header extends Component {
 
 			
 			<ul style={{color:'rgb(7, 14, 48)'}}>
-				<li><a href="/">home</a></li>
-				<li><a href="/MyDrugs">My Drugs</a></li>
-				<li><a href="/Appointment">Appointment</a></li>
-				<li><a href="/History">History</a></li>
-				<li><a href="/AboutUs">about us </a></li>
-				
+			<li><Link to="/">Home</Link></li>
+			<li><Link to="/Appointment">Appointment</Link></li>
+			<li><Link to="/MyDrugs">My Medicine</Link></li>
+			<li><Link to="/History">Order History</Link></li>
+			<li><Link to="/AboutUs">About Us</Link></li>
           <LogoutButton />
 			
 			</ul>	
