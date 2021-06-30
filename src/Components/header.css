@@ -116,9 +116,9 @@ nav ul li ul li:hover>ul {
 }
 
 .nav-list ul{
-	margin-top: -68px;
+	/* margin-top: -68px; */
     font-weight: bold;
-    margin-left: 228px;
+    /* margin-left: 228px; */
 }
 
 
