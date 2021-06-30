@@ -65,7 +65,7 @@ class DoctorModal extends react.Component{
             aria-labelledby="contained-modal-title-vcenter"
             centered
           >
-            <Modal.Header closeButton onClick={()=>this.props.modalClose()}>
+            <Modal.Header>
               <Modal.Title id="contained-modal-title-vcenter">
                 Appointment
               </Modal.Title>

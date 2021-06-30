@@ -29,7 +29,7 @@ class MedicineUpdateButton extends react.Component{
             aria-labelledby="contained-modal-title-vcenter"
             centered
           >
-            <Modal.Header closeButton onClick={()=>this.setState({modalStatus:false})}>
+            <Modal.Header>
               <Modal.Title id="contained-modal-title-vcenter">
                 update the ammount
               </Modal.Title>

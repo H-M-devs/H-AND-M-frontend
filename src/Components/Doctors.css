@@ -40,16 +40,16 @@ html,body {
 	height: 150px;
 	margin: 0 auto;
 	margin-top: 30px;
-	overflow: hidden;
+	overflow:hidden;
 	border-radius: 50%;
 	box-shadow: 2px 2px 5px #E7E6E1;
 }
 
 #avatar {
 	display: inline;
-	height: 230px;
-	width: auto;
-	margin-left: -34px;
+	height: 100%;
+	width: 100%;
+	/* margin-left: -34px; */
 }
 
 #bio {
