@@ -61,7 +61,6 @@ class History extends react.Component {
             <>
             <Header />
 
-            {/* <div style={{ display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' }}> */}
                <div>     
                 {this.state.status &&
                     this.state.addedDrugs.map((value, index) => {
@@ -85,7 +84,7 @@ class History extends react.Component {
                                   <MDBCardText>
                                   ammount : {value.ammount}
                                   </MDBCardText>
-                                        <Reorder className="Reorder_btn" 
+                                        <Reorder 
                                      value={value}
                                         />
                                 </MDBCardBody>

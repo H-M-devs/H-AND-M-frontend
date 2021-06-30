@@ -10,7 +10,7 @@ class MedicineDeleteButton extends react.Component{
         return(
 
 
-            <Button variant="primary"  onClick={()=>{this.props.deleteMedicine(this.props.index)}}>delete</Button>
+            <Button variant="secondary"  onClick={()=>{this.props.deleteMedicine(this.props.index)}}>delete</Button>
 
         )
     }

@@ -12,7 +12,7 @@
    
 }
 .card-container{
-padding-top: 20px;
+padding-top: 40px;
 margin-left: 67px;
 }
 
@@ -56,4 +56,29 @@ margin-left: 67px;
      
       .BTN:hover {
         background-position: 0;
+      }
+
+      .checkout-btn{
+        margin-top: 34px;
+        width: 39%;
+        margin-right: 567px;
+        background: #1158a8;
+        border-color: rgb(243, 243, 228);
+        color: #fff;
+        transition: background 300ms ease-in-out;
+        background-image: linear-gradient(
+    45deg
+    ,#63c4c9 50%, transparent 50%);
+        background-position: 100%;
+        background-size: 400%;
+        height: 50px;
+        border-radius: 10px;
+
+      }
+
+      .card-medicine-container{
+        padding-top: 40px;
+        padding-right: 573px;
+        /* margin-left: 50px; */
+
       }

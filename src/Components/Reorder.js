@@ -47,7 +47,7 @@ class Reorder extends react.Component{
             <div>
 
 
-            <Button variant="primary"  onClick={()=>{this.setState({modalStatus:true})}}>Reorder</Button>
+            <Button variant="secondary"  onClick={()=>{this.setState({modalStatus:true})}}>Reorder</Button>
 
 
             <Modal

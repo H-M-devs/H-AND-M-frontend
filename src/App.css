@@ -65,7 +65,7 @@
   
 }
 
-.wrapper .card{
+.wrapper .Our-card{
   background: #fff;
   width: 430px;
   display: flex;
@@ -80,10 +80,10 @@
   animation: animate 15s linear infinite;
   animation-delay: calc(3s * var(--delay));
 }
-.outer:hover .card{
+.outer:hover .Our-card{
   animation-play-state: paused;
 }
-.wrapper .card:last-child{
+.wrapper .Our-card:last-child{
   animation-delay: calc(-3s * var(--delay));
 }
 @keyframes animate {
@@ -109,11 +109,11 @@
     transform: translateY(-100%) scale(0.5);
   }
 }
-.card .content{
+.Our-card .content{
   display: flex;
   align-items: center;
 }
-.wrapper .card .img{
+.wrapper .Our-card .img{
   height: 90px;
   width: 90px;
   position: absolute;
@@ -123,20 +123,20 @@
   padding: 5px;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
 }
-.card .img img{
+.Our-card .img img{
   height: 100%;
   width: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
-.card .details{
+.Our-card .details{
   margin-left: 80px;
 }
 .details span{
   font-weight: 600;
   font-size: 18px;
 }
-.card a{
+.Our-card a{
   text-decoration: none;
   padding: 2px 25px;
   /* color:rgb(3, 3, 3); */
@@ -154,7 +154,7 @@ font-size: 1em;
 
 }
 
-.card a:hover{
+.Our-card a:hover{
   transform: scale(0.94);
   color:white;
 }
