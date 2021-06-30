@@ -6,6 +6,10 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Reorder from './Reorder';
 import Header from './Header';
+import './History.css';
+import {MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+
+
 
 
 
@@ -57,39 +61,67 @@ class History extends react.Component {
             <>
             <Header />
 
-            <div style={{ display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' }}>
-                            
-
-
+            {/* <div style={{ display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' }}> */}
+               <div>     
                 {this.state.status &&
                     this.state.addedDrugs.map((value, index) => {
-                        return (<Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={value.medicineImg} />
-                            <Card.Body>
-                                <Card.Title>{value.medicineName}</Card.Title>
-                                <Card.Text>
-                                    availability : {value.status}
-                                </Card.Text>
-                                <Card.Text>
-                                    description : {value.medicineDescription}
-                                </Card.Text>
-                                <Card.Text>
-                                    ammount : {value.ammount}
-                                </Card.Text>
-                                <Reorder 
-                                value={value}
-                                />
-                            </Card.Body>
-                        </Card>)
+
+                        return(
+                            <div className="card-container"style={{ "border-radius": "55px"}} >
+                            <MDBCard style={{ maxWidth: '540px' }}>
+                            <MDBRow className='g-0'>
+                              <MDBCol md='4'>
+                                <MDBCardImage src={value.medicineImg} alt='...' fluid />
+                              </MDBCol>
+                              <MDBCol md='8'>
+                                <MDBCardBody>
+                                  <MDBCardTitle>{value.medicineName}</MDBCardTitle>
+                                  <MDBCardText>
+                                  availability : {value.status}
+                                  </MDBCardText>
+                                  <MDBCardText>
+                                  {/* description : {value.medicineDescription} */}
+                                  </MDBCardText>
+                                  <MDBCardText>
+                                  ammount : {value.ammount}
+                                  </MDBCardText>
+                                        <Reorder className="Reorder_btn" 
+                                     value={value}
+                                        />
+                                </MDBCardBody>
+                              </MDBCol>
+                            </MDBRow>
+                          </MDBCard>
+                          </div>
+                        );
+                  
+                        // return (<Card className="card" style={{ width: '18rem' }}>
+                            
+                        //     <Card.Img variant="top" src={value.medicineImg} />
+                        //     <Card.Body>
+                        //         <Card.Title>{value.medicineName}</Card.Title>
+                        //         <Card.Text>
+                        //             availability : {value.status}
+                        //         </Card.Text>
+                        //         <Card.Text>
+                        //             description : {value.medicineDescription}
+                        //         </Card.Text>
+                        //         <Card.Text>
+                        //             ammount : {value.ammount}
+                        //         </Card.Text>
+                        //         <Reorder 
+                        //         value={value}
+                        //         />
+                        //     </Card.Body>
+                        // </Card>)
 
                     })}
                     {this.state.status &&
-                    <Button onClick={()=>{this.clear()}}>Clear History</Button>
+                    <Button className="BTN" onClick={()=>{this.clear()}}>Clear History</Button>
+                  
 
                     }
                     
-
-
 
                     <Modal show={this.state.modalStatus} >
         <Modal.Header>
