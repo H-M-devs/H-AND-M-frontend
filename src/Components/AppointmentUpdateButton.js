@@ -21,7 +21,7 @@ class AppointmentUpdateButton extends react.Component{
         return(
 <>
 
-            <Button variant="primary"  onClick={()=>{this.setState({modalStatus:true})}}>update</Button>
+            <Button variant="secondary"  onClick={()=>{this.setState({modalStatus:true})}}>update</Button>
 
             <Modal
             show={this.state.modalStatus}
