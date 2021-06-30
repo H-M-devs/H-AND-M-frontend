@@ -17,10 +17,11 @@ export class Footer extends Component {
 				<p class="footer-links">
 					<a href="/" class="link-1">Home</a>
 					
-					<a href="/MyDrugs">MyDrugs</a>
 				
 					<a href="/Appointment">Appointment</a>
 				
+					<a href="/MyDrugs">My Medicine</a>
+					<a href="/History">Order history</a>
 					<a href="/AboutUs">About Us</a>
 					
 					
@@ -52,7 +53,7 @@ export class Footer extends Component {
 
 				<p class="footer-company-about">
 					<span>About H and M</span>
-					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+					because we care for your health , we made H&M to help you for appointing dates with doctors and search for a certain medicine.
 				</p>
 
 				

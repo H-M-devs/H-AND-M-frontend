@@ -13,8 +13,8 @@ class AboutUs extends react.Component {
   <div >
 <div className="Ourteam" >
   <h2>Meet Our Team</h2>
-  <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</p>
+  <p>"Teamwork is the ability to work together toward a common vision, the ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results"</p>
+<p>"as we are a pationate developers we believe that No matter how brilliant your mind or strategy, if you’re playing a solo game, you’ll always lose out to a team , so we work as team and we always win"</p>
 </div>
         
       

@@ -11,7 +11,7 @@ export class Header extends Component {
       <div style={{display: 'flow-root'}}>
       
 		<nav>
-			<h4 style={{color:'rgb(7, 14, 48)'}}>H&M</h4>
+			<h4 style={{color:'rgb(7, 14, 48)' , 'font-family': 'Pacifico , cursive'}}>H&M</h4>
 			{ isAuthenticated &&
 		<div class="nav-list">
 

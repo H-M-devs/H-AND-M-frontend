@@ -1,6 +1,6 @@
 import axios from 'axios';
 import react from 'react';
-import Card from 'react-bootstrap/Card';
+// import Card from 'react-bootstrap/Card';
 import { withAuth0 } from "@auth0/auth0-react";
 import MedicineDeleteButton from './MedicineDeleteButton';
 import MedicineUpdateButton from './MedicineUpdateButton';
@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Header from './Header';
+import Footer from './Footer';
 
 
 
@@ -173,6 +174,10 @@ class MyDrugs extends react.Component {
             </div>
 
 
+
+            <div>
+  <Footer/>
+</div>
 
 </>
 

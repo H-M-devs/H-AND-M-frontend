@@ -1,12 +1,13 @@
 import axios from 'axios';
 import react from 'react';
-import Card from 'react-bootstrap/Card';
+// import Card from 'react-bootstrap/Card';
 import { withAuth0 } from "@auth0/auth0-react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Reorder from './Reorder';
 import Header from './Header';
 import './History.css';
+import Footer from './Footer';
 import {MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
 
@@ -58,15 +59,15 @@ class History extends react.Component {
 
     render() {
         return (
-            <>
+            <div style={{position:'relative'}}>          
             <Header />
 
-               <div>     
+               <div style={{minHeight:'64vh'}}>     
                 {this.state.status &&
                     this.state.addedDrugs.map((value, index) => {
 
                         return(
-                            <div className="card-container"style={{ "border-radius": "55px"}} >
+                            <div className="card-container"style={{ "border-radius": "55px" , 'margin-left': '15%',marginTop:'1%'}} >
                             <MDBCard style={{ maxWidth: '540px' }}>
                             <MDBRow className='g-0'>
                               <MDBCol md='4'>
@@ -143,9 +144,11 @@ class History extends react.Component {
 
 
 
+<div>
+  <Footer/>
+</div>
 
-
-</>
+</div>
         )
     }
 }

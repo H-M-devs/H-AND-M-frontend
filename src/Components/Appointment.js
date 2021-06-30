@@ -70,6 +70,8 @@ class Appointment extends react.Component{
             <>
             <Header/>
 
+            <div style={{minHeight:'58vh'}}>
+
             <div style={{display: 'flex', 'justify-content': 'center', 'flex-wrap': 'wrap' , marginTop:'3%' }}>
 
             {this.state.userDataStatus &&
@@ -141,6 +143,9 @@ value= {value}
 
 
     }
+        </div>
+
+
         </div>
         <Footer/>
         </>
