@@ -4,7 +4,7 @@ import { withAuth0 } from "@auth0/auth0-react";
 // import Card from 'react-bootstrap/Card';
 import AppointmentDeleteButton from './AppointmentDeleteButton';
 import AppointmentUpdateButton from './AppointmentUpdateButton';
-// import Footer from './Footer';
+import Footer from './Footer';
 // import  './Appointment.css';
 import Header from './Header';
 import './Appointment.css';
@@ -82,7 +82,7 @@ this.state.userData.map((value,index)  => {
 
 
                     
-   <div class="blog-card"  style={{width: '50%', 'margin-left': '5%'}}>
+   <div class="blog-card"  style={{width: '50%', 'margin-left': '5%', 'border-radius': '20px','box-shadow': '5px 4px 10px #0A1931'}}>
    <div class="meta">
      {/* <ul class="details-app">
        <li class="author"><a href="#">John Doe</a></li>
@@ -142,6 +142,7 @@ value= {value}
 
     }
         </div>
+        <Footer/>
         </>
         )
     }

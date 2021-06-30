@@ -10,7 +10,7 @@ class AppointmentDeleteButton extends react.Component{
         return(
 
 
-            <Button variant="primary"  onClick={()=>{this.props.deleteAppoitment(this.props.index)}}>delete</Button>
+            <Button variant="secondary"  onClick={()=>{this.props.deleteAppoitment(this.props.index)}}>delete</Button>
 
         )
     }

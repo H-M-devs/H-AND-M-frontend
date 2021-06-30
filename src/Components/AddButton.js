@@ -21,7 +21,7 @@ class AddButton extends react.Component{
             <div>
 
 
-            <Button variant="primary" className="doctorsButton"  onClick={()=>{this.setState({modalStatus:true})}}>add</Button>
+            <Button variant="light" className="doctorsButton"  onClick={()=>{this.setState({modalStatus:true})}}>add</Button>
 
 
             <Modal

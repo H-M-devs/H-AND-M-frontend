@@ -95,6 +95,10 @@
           .blog-card:first-child {
             margin-left: -4px;
           }
+
+          .blog-card:hover{
+            transform: scale(1.01);
+          }
          
       
     
@@ -158,6 +162,7 @@
         height: auto;
       }
       .description {
+        background-color: #F1F3F8;
         flex-basis: 60%;}
         .blog-card:before {
           transform: skewX(-3deg);
@@ -185,4 +190,6 @@
         }
       
     
-  
+  #root{
+    position: relative;
+  }
