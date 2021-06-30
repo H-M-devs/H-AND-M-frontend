@@ -13,7 +13,7 @@ export class Header extends Component {
 		<nav>
 			<h4 style={{color:'rgb(7, 14, 48)'}}>H&M</h4>
 			{ isAuthenticated &&
-		<>
+		<div class="nav-list">
 
 
 			
@@ -26,7 +26,7 @@ export class Header extends Component {
           <LogoutButton />
 			
 			</ul>	
-			</>}
+			</div>}
 
   	
 		</nav>

@@ -20,7 +20,7 @@ class AboutUs extends react.Component {
       
               <div className="wrapper">
                 <div className="outer">
-                  <div className="card" style={{"--delay":"-1"}}>
+                  <div className="Our-card" style={{"--delay":"-1"}}>
                     <div className="content">
                       <div className="img"><img src="https://avatars.githubusercontent.com/u/63788477?v=4" alt=""/></div>
                         <div className="details">
@@ -31,7 +31,7 @@ class AboutUs extends react.Component {
                       </div>
                     </div>
 
-                    <div className="card" style={{"--delay":"-1"}}>
+                    <div className="Our-card" style={{"--delay":"-1"}}>
                             <div className="content">
                               <div className="img"><img src="https://avatars.githubusercontent.com/u/80677034?v=4" alt=""/></div>
                                 <div className="details">
@@ -43,7 +43,7 @@ class AboutUs extends react.Component {
                               </div>
                               
                             </div>
-                    <div className="card" style={{"--delay":"0"}}>
+                    <div className="Our-card" style={{"--delay":"0"}}>
                       <div className="content">
                         <div className="img"><img src="https://avatars.githubusercontent.com/u/81553931?v=4" alt=""/></div>
                           <div className="details">
@@ -53,7 +53,7 @@ class AboutUs extends react.Component {
                          <a href="https://github.com/laithfayizhussein">Follow</a>
                         </div>
                       </div>
-                      <div className="card" style={{"--delay":"1"}}>
+                      <div className="Our-card" style={{"--delay":"1"}}>
                         <div className="content">
                           <div className="img"><img src="https://avatars.githubusercontent.com/u/66292996?v=4" alt=""/></div>
                             <div className="details">
@@ -63,7 +63,7 @@ class AboutUs extends react.Component {
                            <a href="https://github.com/shathasmadi">Follow</a>
                           </div>
                         </div>
-                        <div className="card" style={{"--delay":"2"}}>
+                        <div className="Our-card" style={{"--delay":"2"}}>
                           <div className="content">
                             <div className="img"><img src="https://avatars.githubusercontent.com/u/81151287?v=4" alt=""/></div>
                               <div className="details">
@@ -73,7 +73,7 @@ class AboutUs extends react.Component {
                              <a href="https://github.com/Maram-Ankir?tab=repositories">Follow</a>
                             </div>
                           </div>
-                          <div className="card" style={{"--delay":"2"}}>
+                          <div className="Our-card" style={{"--delay":"2"}}>
                             <div className="content">
                               <div className="img"><img src="https://avatars.githubusercontent.com/u/81149143?v=4" alt=""/></div>
                                 <div className="details">

@@ -6,6 +6,7 @@ import MedicineDeleteButton from './MedicineDeleteButton';
 import MedicineUpdateButton from './MedicineUpdateButton';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Header from './Header';
 
 
@@ -97,12 +98,9 @@ class MyDrugs extends react.Component {
             error => {
                 alert(error.message)
             })
-
     }
 
-
-
-    render() {
+ render() {
         return (
             <>
             <Header />
@@ -110,36 +108,47 @@ class MyDrugs extends react.Component {
             <div style={{ display: 'flex', 'justify-content': 'center', gap: '2rem', 'flex-wrap': 'wrap' , 'min-height': '64vh'}}>
                 {this.state.status &&
                     this.state.addedDrugs.map((value, index) => {
-                        return (<Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={value.medicineImg} />
-                            <Card.Body>
-                                <Card.Title>{value.medicineName}</Card.Title>
-                                <Card.Text>
-                                    availability : {value.status}
-                                </Card.Text>
-                                <Card.Text>
+                        return (
+                            <div className="card-medicine-container" >
+
+                            <MDBCard style={{ maxWidth: '540px' }}>
+                            <MDBRow className='g-0'>
+                              <MDBCol md='4'>
+                                <MDBCardImage src={value.medicineImg} alt='...' fluid />
+                              </MDBCol>
+                              <MDBCol md='8'>
+                                <MDBCardBody>
+                                  <MDBCardTitle>{value.medicineName}</MDBCardTitle>
+                                  {/* <MDBCardText>
                                     description : {value.medicineDescription}
-                                </Card.Text>
-                                <Card.Text>
-                                    ammount : {value.ammount}
-                                </Card.Text>
-                                <MedicineDeleteButton
-                                    deleteMedicine={this.deleteMedicine}
-                                    index={index}
-                                />
-                                <MedicineUpdateButton
-                                    updateMedicine={this.updateMedicine}
-                                    index={index}
-                                    value={value}
-                                />
 
-
-                            </Card.Body>
-                        </Card>)
+                                  </MDBCardText> */}
+                                  <MDBCardText>
+                                  availability : {value.status}
+                                  </MDBCardText>
+                                  <MDBCardText>
+                                  ammount : {value.ammount}
+                                  </MDBCardText>
+                                   <MedicineDeleteButton
+                                     deleteMedicine={this.deleteMedicine}
+                                     index={index}
+                                 />
+                                 <MedicineUpdateButton
+                                     updateMedicine={this.updateMedicine}
+                                     index={index}
+                                     value={value}
+                                 />
+                                </MDBCardBody>
+                              </MDBCol>
+                            </MDBRow>
+                          </MDBCard>
+                          </div>
+                          
+                        )
 
                     })}
                     {this.state.status &&
-                        <Button onClick={()=>{this.checkout()}}>Checkout</Button>
+                        <Button className="checkout-btn" onClick={()=>{this.checkout()}}>Checkout</Button>
                     }
                     
 

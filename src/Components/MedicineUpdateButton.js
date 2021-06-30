@@ -21,7 +21,7 @@ class MedicineUpdateButton extends react.Component{
         return(
 <>
 
-            <Button variant="primary"  onClick={()=>{this.setState({modalStatus:true})}}>update ammount</Button>
+            <Button variant="secondary"  onClick={()=>{this.setState({modalStatus:true})}}>update ammount</Button>
 
             <Modal
             show={this.state.modalStatus}

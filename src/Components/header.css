@@ -24,6 +24,10 @@ nav {
 }
 
 nav h4 {
+	font-family: cursive;
+
+    letter-spacing: 2px;
+    font-size: 38px;
 	color:var(--white);
 	line-height:var(--navheight);
 	text-transform:uppercase;
@@ -109,6 +113,12 @@ nav ul li:hover>ul {
 
 nav ul li ul li:hover>ul {
 	display:block;
+}
+
+.nav-list ul{
+	margin-top: -68px;
+    font-weight: bold;
+    margin-left: 228px;
 }
 
 
